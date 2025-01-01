@@ -3,6 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BoardGame.MainPage">
 
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="15">
 
+            <VerticalStackLayout Padding="15" BackgroundColor="Black">
+                <Label Text="" FontSize="Header" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <Grid x:Name="cardGrid" BackgroundColor="white" HeightRequest="500" WidthRequest="500" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RowSpacing="5" ColumnSpacing="5" Padding="5"/>
+
+            <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15">
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button x:Name="initializeTheGame" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="Red"/>
+                    <Button x:Name="restartGame" Text="Restart" IsEnabled="False" HeightRequest="50" WidthRequest="90" BackgroundColor="Red" TextColor="White"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button x:Name="easyDifficulty" Text="Easy (4x4)" HeightRequest="50" WidthRequest="120" BackgroundColor="Red"/>
+                    <Button x:Name="mediumDifficulty" Text="Medium (6x6)" HeightRequest="50" WidthRequest="120" BackgroundColor="Red"/>
+                    <Button x:Name="hardDifficulty" Text="Hard (8x8)" HeightRequest="50" WidthRequest="120" BackgroundColor="Red"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label x:Name="scoreCounter" Text="Score: 0" HeightRequest="50" WidthRequest="120" BackgroundColor="Red" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
