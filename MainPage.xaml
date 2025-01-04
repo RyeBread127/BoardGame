@@ -6,7 +6,9 @@
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="15">
 
-            <Grid x:Name="visibleChessBoard" BackgroundColor="white" HeightRequest="500" WidthRequest="500" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RowSpacing="5" ColumnSpacing="5" Padding="5"/>
+            <Image Source="board.png" Scale="0.5"/>
+
+            <Grid x:Name="gameBoard" BackgroundColor="white" HeightRequest="500" WidthRequest="500" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RowSpacing="5" ColumnSpacing="5" Padding="5"/>
 
             <VerticalStackLayout BackgroundColor="LightGray" Spacing="15" Padding="15">
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
