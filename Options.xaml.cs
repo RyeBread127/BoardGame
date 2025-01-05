@@ -1,15 +1,14 @@
 namespace BoardGame;
 
-public partial class WelcomePage : ContentPage
+public partial class Options : ContentPage
 {
-	public WelcomePage()
+	public Options()
 	{
 		InitializeComponent();
 	}
-
     private async void optionsIcon_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Options());
+        await Navigation.PopAsync();
     }
 
     private async void monopolyLogoButton_Clicked(object sender, EventArgs e)
@@ -19,7 +18,6 @@ public partial class WelcomePage : ContentPage
 
     private async void settingsIcon_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Settings());
+        await Navigation.PushAsync(new Options());
     }
-
 }

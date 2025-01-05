@@ -3,28 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BoardGame.MainPage">
 
-    <ScrollView>
+    <ScrollView BackgroundColor="#850b11">
         <VerticalStackLayout>
-            <VerticalStackLayout BackgroundColor="LightGray" Spacing="15" Padding="15">
+            <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15" VerticalOptions="Start">
                 <Grid>
-                    <Button x:Name="monopolyLogoButton" ImageSource="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" Scale="3" BackgroundColor="LightGray"/>
-                    <Button x:Name="optionsIcon" ImageSource="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Scale="3" BackgroundColor="LightGray"/>
+                    <ImageButton x:Name="monopolyLogoButton" Source="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+
+                    <ImageButton x:Name="settingsIcon" Source="settingsicon.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                    <ImageButton x:Name="optionsIcon" Source="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
                 </Grid>
             </VerticalStackLayout>
 
-            <Grid x:Name="gameBoard">
+            <Grid x:Name="gameBoard" Padding="5">
                 <Image Source="board.png" WidthRequest="700" HeightRequest="700"/>
             </Grid>
-            
-   
 
-            <VerticalStackLayout BackgroundColor="LightGray" Spacing="15" Padding="15">
+
+            <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15">
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                     <Button x:Name="initializeTheGame" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
-                    <Button x:Name="restartGame" Text="Restart" IsEnabled="False" HeightRequest="50" WidthRequest="90" BackgroundColor="#d42b2f" TextColor="White"/>
+                    <Button x:Name="rollDice" ImageSource="dice.png" IsEnabled="False" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>
+        
     </ScrollView>
 
 </ContentPage>

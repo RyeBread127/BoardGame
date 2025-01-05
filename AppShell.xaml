@@ -8,8 +8,7 @@
     Title="BoardGame">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:WelcomePage}"
         Route="MainPage" />
 
 </Shell>

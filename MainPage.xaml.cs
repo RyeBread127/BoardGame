@@ -16,9 +16,14 @@
             await Navigation.PushAsync(new WelcomePage());
         }
 
-        public async void optionsIcon_Clicked(object sender, EventArgs e)
+        private async void settingsIcon_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Settings());
+        }
+
+        private async void optionsIcon_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Options());
         }
     }
 

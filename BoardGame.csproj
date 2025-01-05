@@ -62,6 +62,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Options.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
