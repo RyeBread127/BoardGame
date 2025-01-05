@@ -9,7 +9,7 @@ namespace BoardGame.MonopolyClasses.GameSquares
     abstract internal class Property : Squares
     {
         protected int buyingPrice { get; set; }
-        protected int[] rent;
+        protected int rent;
         protected bool mortgaged { get; set; }
     }
 }

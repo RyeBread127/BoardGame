@@ -11,6 +11,7 @@
             InitializeComponent();
         }
 
+
         private void InitializeTheGame_Clicked(object sender, EventArgs e)
         {
             board = new int[boardHeight, boardLength];

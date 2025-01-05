@@ -8,5 +8,9 @@ namespace BoardGame.MonopolyClasses.GameSquares
 {
     internal class Go : Squares
     {
+        public Go(String name) 
+        {
+            this.name = name;
+        }
     }
 }
