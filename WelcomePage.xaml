@@ -4,9 +4,11 @@
              x:Class="BoardGame.WelcomePage"
              Title="WelcomePage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <VerticalStackLayout BackgroundColor="LightGray" Spacing="15" Padding="15">
+            <Grid>
+                <Button x:Name="monopolyLogoButton" ImageSource="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" Scale="3" BackgroundColor="LightGray"/>
+                <Button x:Name="optionsIcon" ImageSource="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Scale="3" BackgroundColor="LightGray"/>
+            </Grid>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

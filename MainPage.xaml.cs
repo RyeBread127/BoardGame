@@ -11,8 +11,15 @@
             InitializeComponent();
         }
 
+        public async void monopolyLogoButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new WelcomePage());
+        }
 
-
+        public async void optionsIcon_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Settings());
+        }
     }
 
 }
