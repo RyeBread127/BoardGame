@@ -4,16 +4,21 @@
              x:Class="BoardGame.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="15" Padding="15">
+        <VerticalStackLayout>
+            <VerticalStackLayout BackgroundColor="LightGray" Spacing="15" Padding="15">
+                <Image Source="monopolylogo.png" WidthRequest="100" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" Scale="3"/>
+            </VerticalStackLayout>
 
-            <Image Source="board.png" Scale="0.5"/>
-
-            <Grid x:Name="gameBoard" BackgroundColor="white" HeightRequest="500" WidthRequest="500" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RowSpacing="5" ColumnSpacing="5" Padding="5"/>
+            <Grid x:Name="gameBoard">
+                <Image Source="board.png" WidthRequest="700" HeightRequest="700"/>
+            </Grid>
+            
+   
 
             <VerticalStackLayout BackgroundColor="LightGray" Spacing="15" Padding="15">
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Button x:Name="initializeTheGame" Clicked="InitializeTheGame_Clicked" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="Orange"/>
-                    <Button x:Name="restartGame" Text="Restart" IsEnabled="False" HeightRequest="50" WidthRequest="90" BackgroundColor="Orange" TextColor="White"/>
+                    <Button x:Name="initializeTheGame" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
+                    <Button x:Name="restartGame" Text="Restart" IsEnabled="False" HeightRequest="50" WidthRequest="90" BackgroundColor="#d42b2f" TextColor="White"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>
