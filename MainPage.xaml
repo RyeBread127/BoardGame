@@ -10,7 +10,7 @@
                     <ImageButton x:Name="monopolyLogoButton" Source="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
                    
                     <HorizontalStackLayout HorizontalOptions="End">
-                        <Button Text="Settings" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
+                        <Button Text="App Settings" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
                         <ImageButton x:Name="settingsIcon" Source="settingsicon.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
                     </HorizontalStackLayout>
 
@@ -21,15 +21,64 @@
                 </Grid>
             </VerticalStackLayout>
 
-            <Grid x:Name="gameBoard" Padding="5">
-                <Image Source="board.png" WidthRequest="700" HeightRequest="700"/>
-            </Grid>
+            <Grid x:Name="gameBoard" HeightRequest="700" WidthRequest="700">
+                <Image Source="board.png" Aspect="AspectFill"/>
 
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Add a sample label in the top-left cell -->
+                    <Label BackgroundColor="Yellow" Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
+                    <Label BackgroundColor="Pink" Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
+                    <Label BackgroundColor="Pink" Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" />
+
+                    <Label BackgroundColor="Yellow" Grid.Row="10" Grid.Column="10" HorizontalOptions="Fill" VerticalOptions="Fill" />
+                    <Label BackgroundColor="Pink" Grid.Row="9" Grid.Column="10" HorizontalOptions="Fill" VerticalOptions="Fill" />
+                    <Label BackgroundColor="Pink" Grid.Row="10" Grid.Column="9" HorizontalOptions="Fill" VerticalOptions="Fill" />
+
+                    <Label BackgroundColor="Yellow" Grid.Row="10" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
+                    <Label BackgroundColor="Yellow" Grid.Row="0" Grid.Column="10" HorizontalOptions="Fill" VerticalOptions="Fill" />
+
+                    <Label BackgroundColor="Yellow" Grid.Row="0" Grid.Column="5" HorizontalOptions="Fill" VerticalOptions="Fill" />
+
+                </Grid>
+            </Grid>
+            
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
+                <Button x:Name="initializeTheGame" Clicked="initializeTheGame_Clicked" IsEnabled="True" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
+                <Button x:Name="rollDice" ImageSource="dice.png" IsEnabled="False" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
+            </HorizontalStackLayout>
 
             <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15">
-                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Button x:Name="initializeTheGame" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
-                    <Button x:Name="rollDice" ImageSource="dice.png" IsEnabled="False" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Image Source="a50dollars.jpg" WidthRequest="300" HeightRequest="100" Aspect="AspectFit"/>
+                    <Image Source="a100dollars.jpg" WidthRequest="300" HeightRequest="100" Aspect="AspectFit"/>
+                    <Image Source="a10dollars.jpg" WidthRequest="300" HeightRequest="100" Aspect="AspectFit"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>
