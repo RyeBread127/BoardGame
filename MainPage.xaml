@@ -8,9 +8,16 @@
             <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15" VerticalOptions="Start">
                 <Grid>
                     <ImageButton x:Name="monopolyLogoButton" Source="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                   
+                    <HorizontalStackLayout HorizontalOptions="End">
+                        <Button Text="Settings" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
+                        <ImageButton x:Name="settingsIcon" Source="settingsicon.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                    </HorizontalStackLayout>
 
-                    <ImageButton x:Name="settingsIcon" Source="settingsicon.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
-                    <ImageButton x:Name="optionsIcon" Source="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                    <HorizontalStackLayout HorizontalOptions="Start">
+                        <ImageButton x:Name="optionsIcon" Source="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                        <Button Text="Game options" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="optionsIcon_Clicked" BackgroundColor="Black"/>
+                    </HorizontalStackLayout>
                 </Grid>
             </VerticalStackLayout>
 
