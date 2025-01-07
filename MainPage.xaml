@@ -21,10 +21,10 @@
                 </Grid>
             </VerticalStackLayout>
 
-            <Grid x:Name="gameBoard" HeightRequest="700" WidthRequest="700">
+            <Grid HeightRequest="700" WidthRequest="700">
                 <Image Source="board.png" Aspect="AspectFill"/>
 
-                <Grid>
+                <Grid x:Name="gameBoard">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="100" />
                         <RowDefinition Height="*" />
@@ -51,21 +51,6 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="100" />
                     </Grid.ColumnDefinitions>
-
-                    <!-- Add a sample label in the top-left cell -->
-                    <Label BackgroundColor="Yellow" Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
-                    <Label BackgroundColor="Pink" Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
-                    <Label BackgroundColor="Pink" Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" />
-
-                    <Label BackgroundColor="Yellow" Grid.Row="10" Grid.Column="10" HorizontalOptions="Fill" VerticalOptions="Fill" />
-                    <Label BackgroundColor="Pink" Grid.Row="9" Grid.Column="10" HorizontalOptions="Fill" VerticalOptions="Fill" />
-                    <Label BackgroundColor="Pink" Grid.Row="10" Grid.Column="9" HorizontalOptions="Fill" VerticalOptions="Fill" />
-
-                    <Label BackgroundColor="Yellow" Grid.Row="10" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
-                    <Label BackgroundColor="Yellow" Grid.Row="0" Grid.Column="10" HorizontalOptions="Fill" VerticalOptions="Fill" />
-
-                    <Label BackgroundColor="Yellow" Grid.Row="0" Grid.Column="5" HorizontalOptions="Fill" VerticalOptions="Fill" />
-
                 </Grid>
             </Grid>
             

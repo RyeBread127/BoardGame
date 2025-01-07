@@ -16,14 +16,8 @@
                 </Grid>
             </VerticalStackLayout>
 
+            <Label Text="OPTIONS" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
 
-            <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15">
-                <HorizontalStackLayout HorizontalOptions="Center">
-                    <Image Source="a50dollars.jpg" WidthRequest="300" HeightRequest="100" Aspect="AspectFit"/>
-                    <Image Source="a100dollars.jpg" WidthRequest="300" HeightRequest="100" Aspect="AspectFit"/>
-                    <Image Source="a10dollars.jpg" WidthRequest="300" HeightRequest="100" Aspect="AspectFit"/>
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
         </VerticalStackLayout>
 
     </ScrollView>
