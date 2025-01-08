@@ -12,7 +12,7 @@ namespace BoardGame.MonopolyClasses.GameSquares
         protected int buildingPrice { get; set; }
         protected int numberOfHouses { get; set; }
 
-        public Street(string name, int buyingPrice, int rent, bool mortgaged, string colour, int buildingPrice, int numberOfHouses)
+        public Street(string name, int buyingPrice, int rent, bool mortgaged, string colour, int buildingPrice, int numberOfHouses, int owner)
         {
             this.name = name;
             this.buyingPrice = buyingPrice;
@@ -21,6 +21,7 @@ namespace BoardGame.MonopolyClasses.GameSquares
             this.colour = colour;
             this.buildingPrice = buildingPrice;
             this.numberOfHouses = numberOfHouses;
+            this.owner = owner;
         }
     }
 }

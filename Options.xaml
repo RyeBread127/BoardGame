@@ -11,12 +11,13 @@
 
                     <HorizontalStackLayout HorizontalOptions="Start">
                         <ImageButton x:Name="optionsIcon" Source="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
-                        <Button Text="Game options" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="optionsIcon_Clicked" BackgroundColor="Black"/>
+                        <Button Text="GAME START OPTIONS" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="optionsIcon_Clicked" BackgroundColor="Black"/>
                     </HorizontalStackLayout>
                 </Grid>
             </VerticalStackLayout>
 
-            <Label Text="OPTIONS" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+
+            <Label Text="OPTIONS" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" TextColor="White" Padding="15"/>
 
         </VerticalStackLayout>
 

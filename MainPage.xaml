@@ -7,21 +7,21 @@
         <VerticalStackLayout>
             <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15" VerticalOptions="Start">
                 <Grid>
-                    <ImageButton x:Name="monopolyLogoButton" Source="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                    <ImageButton x:Name="monopolyLogoButton" Source="monopolylogo.png" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
                    
                     <HorizontalStackLayout HorizontalOptions="End">
-                        <Button Text="App Settings" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
-                        <ImageButton x:Name="settingsIcon" Source="settingsicon.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                        <Button Text="PROPERTIES" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
+                        <ImageButton x:Name="settingsIcon" Source="deed.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
                     </HorizontalStackLayout>
 
                     <HorizontalStackLayout HorizontalOptions="Start">
                         <ImageButton x:Name="optionsIcon" Source="optionsicon.png" Clicked="optionsIcon_Clicked" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
-                        <Button Text="Game options" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="optionsIcon_Clicked" BackgroundColor="Black"/>
+                        <Button Text="GAME START OPTIONS" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="optionsIcon_Clicked" BackgroundColor="Black"/>
                     </HorizontalStackLayout>
                 </Grid>
             </VerticalStackLayout>
 
-            <Grid HeightRequest="700" WidthRequest="700">
+            <Grid HeightRequest="700" WidthRequest="700" Padding="10">
                 <Image Source="board.png" Aspect="AspectFill"/>
 
                 <Grid x:Name="gameBoard">
@@ -53,10 +53,25 @@
                     </Grid.ColumnDefinitions>
                 </Grid>
             </Grid>
-            
+
             <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
-                <Button x:Name="initializeTheGame" Clicked="initializeTheGame_Clicked" IsEnabled="True" Text="Start game" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
-                <Button x:Name="rollDice" ImageSource="dice.png" IsEnabled="False" HeightRequest="50" WidthRequest="100" BackgroundColor="#d42b2f"/>
+                <Button x:Name="initializeTheGame" Clicked="initializeTheGame_Clicked" IsEnabled="True" Text="Start game" HeightRequest="50" WidthRequest="150" BackgroundColor="#d42b2f"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
+                <Button x:Name="money" ImageSource="money.png" Text="{Binding playermoney}" HeightRequest="50" WidthRequest="175" BackgroundColor="#d42b2f"/>
+                <Button x:Name="numberOfProperties" ImageSource="property.png" Text="Properties: 0" HeightRequest="50" WidthRequest="175" BackgroundColor="#d42b2f"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
+                <Button x:Name="rollDice" Clicked="rollDice_Clicked" Text="Roll dice" ImageSource="dice.png" IsEnabled="False" HeightRequest="50" WidthRequest="175" BackgroundColor="#d42b2f" TextColor="White"/>
+                <Button x:Name="rollValue" Text="Roll value: 0" ImageSource="dice.png" HeightRequest="50" WidthRequest="175" BackgroundColor="#d42b2f"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
+                <Button x:Name="buyHouse" Clicked="buyHouse_Clicked" ImageSource="greenhouse.png" Text="Buy house" HeightRequest="50" WidthRequest="175" BackgroundColor="#d42b2f"/>
+                <Button x:Name="sellHouse" Clicked="sellHouse_Clicked" ImageSource="sellhouse.png" Text="Sell house" HeightRequest="50" WidthRequest="175" BackgroundColor="#d42b2f"/>
+
             </HorizontalStackLayout>
 
             <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15">

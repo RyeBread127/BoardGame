@@ -4,27 +4,281 @@
              x:Class="BoardGame.Settings">
 
     <ScrollView BackgroundColor="#850b11">
+        <!-- This page was originally going to be settings page but i changed it to a property page, i didnt wanna refactor everything so i left the name and methods as is-->
         <VerticalStackLayout>
             <VerticalStackLayout BackgroundColor="Black" Spacing="15" Padding="15" VerticalOptions="Start">
                 <Grid>
                     <ImageButton x:Name="monopolyLogoButton" Source="monopolylogo.png" Clicked="monopolyLogoButton_Clicked" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
 
                     <HorizontalStackLayout HorizontalOptions="End">
-                        <Button Text="App Settings" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
-                        <ImageButton x:Name="settingsIcon" Source="settingsicon.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
+                        <Button Text="PROPERTIES" TextColor="White" FontSize="Large" FontAttributes="Bold" Clicked="settingsIcon_Clicked" BackgroundColor="Black"/>
+                        <ImageButton x:Name="settingsIcon" Source="property.png" Clicked="settingsIcon_Clicked" WidthRequest="100" HeightRequest="50" VerticalOptions="Center" BackgroundColor="Black" Aspect="AspectFit"/>
                     </HorizontalStackLayout>
                 </Grid>
             </VerticalStackLayout>
 
-            <Label Text="SETTINGS MENU" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <Label Text="PROPERTIES" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
 
-            <Grid Padding="15">
-                <VerticalStackLayout HorizontalOptions="Center" BackgroundColor="White">
-                    <Label Text="TURN OFF MUSIC" FontAttributes="Bold" HorizontalOptions="Center"/>
-                    <Switch HorizontalOptions="Center" VerticalOptions="Center" OnColor="Black"/>
+            <!--
+            <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <CollectionView ItemsSource="{Binding monopolyBoard}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding properties[1].name, StringFormat='Name: {0}'}" TextColor="Black"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </VerticalStackLayout>
-            </Grid>
+            </VerticalStackLayout>
+            -->
+            <VerticalStackLayout Padding="5">
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Brown" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Brown" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
 
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="LightBlue" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="LightBlue" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="LightBlue" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Pink" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Pink" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Pink" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Orange" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Orange" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Orange" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Red" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Red" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Red" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Yellow" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Yellow" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Yellow" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Green" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Green" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Green" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Padding="5">
+                    <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Button BackgroundColor="Blue" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <VerticalStackLayout BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+                            <Button BackgroundColor="Blue" Text="name" TextColor="Black" WidthRequest="120" Margin="0, 0, 10, 0"/>
+                            <Label Text="rent" TextColor="Black"/>
+                            <Label Text="mortgaged" TextColor="Black"/>
+                            <Label Text="building price" TextColor="Black"/>
+                            <Label Text="houses" TextColor="Black"/>
+                            <Label Text="owner" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+            
         </VerticalStackLayout>
 
     </ScrollView>

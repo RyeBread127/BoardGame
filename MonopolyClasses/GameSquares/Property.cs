@@ -11,5 +11,6 @@ namespace BoardGame.MonopolyClasses.GameSquares
         protected int buyingPrice { get; set; }
         protected int rent;
         protected bool mortgaged { get; set; }
+        protected int owner { get; set; }
     }
 }
